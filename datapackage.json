@@ -1,0 +1,105 @@
+{
+  "accrual_periodicity": "other",
+  "additional_limitations": "",
+  "citation": "Radiologic Health Branch, Department of Public Health.  2015.  Radiological Air Sample Quarterly Composites from 2012Q1 to 2017Q3.csv",
+  "contact_email": "opendata@cdph.ca.gov",
+  "data_collection_tool": "At each sampling site, an electric pump pulls air through a borosilicate glass microfiber filter and a TEDA-impregnated 20x40 mesh carbon cartridge.  The sample media are exchanged weekly and delivered to the California Department of Public Health - Drinking Water and Radiation Laboratory for analysis.  Each quarter, all glass paper filters collected for the period per site are combined and quantified by a high-purity germanium photo-detector.  This process is specifically sensitive to long-lived radionuclides.",
+  "data_license": "Terms of Use",
+  "de_identification_method": "",
+  "description": "IMPORTANT: Please see the attached PDF for more context on this dataset.  Per Health and Safety Code 114755 which mandates that \"The department shall monitor radioactive materials in the environment\", air sampling stations have been placed in or near major population centers with the potential for significant radiological activity.  The data presented in this table are for quarterly aggregates of sampling media per site.  Dose per quarter is reported in millirem Total Effective Dose Equivalent (TEDE); all other values are radiological activity concentrations reported in units of picoCuries per cubic meter.  Any positive result less than the minimum detectable activity is attributable to statistical measurement noise, and results are reported even in the case of non-detection.  Beryllium-7 and Potassium-40 are naturally occurring radionuclides.  The other radionuclides in the dataset are fission products.  Detection of Cesium-137 is not necessarily indicative of a new release because atmospheric nuclear weapons testing distributed significant amounts across the world that are still measurable.",
+  "geo_coverage": "California",
+  "geographic_granularity": "other",
+  "keywords": [
+    "air sampling",
+    "environmental radiation",
+    "radiation",
+    "radiological measurement",
+    "radionuclide concentration"
+  ],
+  "limitations": "Limitations",
+  "name": "radiological-air-sample-quarterly-composites",
+  "program_web_page": "https://www.cdph.ca.gov/Programs/CEH/DRSEM/Pages/RHB.aspx",
+  "related_resources": "",
+  "resources": [
+    {
+      "description": "IMPORTANT: Please see the attached PDF for more context on this dataset.  Per Health and Safety Code 114755 which mandates that \"The department shall monitor radioactive materials in the environment\", air sampling stations have been placed in or near major population centers with the potential for significant radiological activity.  The data presented in this table are for quarterly aggregates of sampling media per site.  Dose per quarter is reported in millirem Total Effective Dose Equivalent (TEDE); all other values are radiological activity concentrations reported in units of picoCuries per cubic meter.  Any positive result less than the minimum detectable activity is attributable to statistical measurement noise, and results are reported even in the case of non-detection.  Beryllium-7 and Potassium-40 are naturally occurring radionuclides.  The other radionuclides in the dataset are fission products.  Detection of Cesium-137 is not necessarily indicative of a new release because atmospheric nuclear weapons testing distributed significant amounts across the world that are still measurable.",
+      "format": "CSV",
+      "hash": "c773889ea52b6bdcce06534c023649f5",
+      "name": "radiological-air-sample-quarterly-composites-csv",
+      "path": "radiological-air-sample-quarterly-composites-.csv",
+      "schema": {
+        "fields": [
+          {
+            "description": "Year and Quarter, with the first quarter beginning on January 1",
+            "name": "Sampling Period",
+            "type": "string"
+          },
+          {
+            "description": "Site of air monitoring station",
+            "name": "Sampling Location",
+            "type": "string"
+          },
+          {
+            "description": "Isotope of an element capable of transformation to a different element or state by emission of a particle",
+            "name": "Radionuclide",
+            "type": "string"
+          },
+          {
+            "description": "Concentration of radioactivity per volume of air for the specified radionuclide, quantified using method Ga-01-R as found in EML Procedures Manual, HASL-300, 28th Edition, Department of Energy, 1997",
+            "name": "Result (pCi/m3)",
+            "type": "string"
+          },
+          {
+            "description": "Counting Error at the 95% confidence level as defined in Prescribed Procedures for Measurement of Radioactivity in Drinking Water, EPA-600/4-80-032, 1980",
+            "name": "Counting Error (pCi/m3)",
+            "type": "string"
+          },
+          {
+            "description": "MDA95 is based on LLD95, as defined in section 7010G of Standard Methods for the Examination of Water and Wastewater, American Water Works Association, 21st Edition, 2005",
+            "name": "Minimum Detectable Activity 95% (pCi/m3",
+            "type": "string"
+          },
+          {
+            "description": "The sum of doses due to radiation from outside of the body and long-term projected doses due to radionuclides inhaled, ingested, or absorbed into the body.",
+            "name": "Total Effective Dose Equivalent (millirem)",
+            "type": "string"
+          },
+          {
+            "description": "As determined by the Nuclear Regulatory Commission (NRC) and published in 10CFR20, Appendix B, Table 2:  The concentration of a single radionuclide that, if inhaled continuously for an entire year, would result in a TEDE of 50 millirem.",
+            "name": "NRC Effluent Air Conc. Limit (pCi/m3)",
+            "type": "string"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "path": "https://data.chhs.ca.gov/dataset/6e5d7d39-b8c2-471c-88e4-a758cb673b31/resource/05c64198-6ea5-400d-980d-31a49a8eedd8/download/radiological-air-sample-quarterly-composites-from-2012q1-to-2017q3.csv",
+          "title": "Radiological Air Sample Quarterly Composites (CSV)"
+        }
+      ],
+      "title": "Radiological Air Sample Quarterly Composites (CSV)"
+    },
+    {
+      "description": "IMPORTANT: Please see the attached PDF for more context on this dataset.  Per Health and Safety Code 114755 which mandates that \"The department shall monitor radioactive materials in the environment\", air sampling stations have been placed in or near major population centers with the potential for significant radiological activity.  The data presented in this table are for quarterly aggregates of sampling media per site.  Dose per quarter is reported in millirem Total Effective Dose Equivalent (TEDE); all other values are radiological activity concentrations reported in units of picoCuries per cubic meter.  Any positive result less than the minimum detectable activity is attributable to statistical measurement noise, and results are reported even in the case of non-detection.  Beryllium-7 and Potassium-40 are naturally occurring radionuclides.  The other radionuclides in the dataset are fission products.  Detection of Cesium-137 is not necessarily indicative of a new release because atmospheric nuclear weapons testing distributed significant amounts across the world that are still measurable.",
+      "format": "PDF",
+      "name": "radiological-air-sample-quarterly-composites",
+      "path": "radiological-air-sample-quarterly-composites.pdf",
+      "sources": [
+        {
+          "path": "https://data.chhs.ca.gov/dataset/6e5d7d39-b8c2-471c-88e4-a758cb673b31/resource/8723f1d1-98e8-4f8e-bd42-fced4b518458/download/radiological-air-sample-quarterly-composites.pdf",
+          "title": "radiological-air-sample-quarterly-composites"
+        }
+      ],
+      "title": "radiological-air-sample-quarterly-composites"
+    }
+  ],
+  "secondary_sources": "N/A",
+  "sources": [
+    {
+      "name": "Radiologic Health Branch",
+      "web": "https://www.cdph.ca.gov/Programs/CEH/DRSEM/Pages/RHB-Environment/Monitoring.aspx"
+    }
+  ],
+  "temporal_coverage": "start 2012Q1 and end 2017Q3\r\n",
+  "title": "Radiological Air Sample Quarterly Composites"
+}

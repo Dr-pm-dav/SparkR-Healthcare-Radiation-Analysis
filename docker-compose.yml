@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+
+  spark-master:
+    image: apache/spark:latest
+    container_name: spark-master
+    ports:
+      - "7077:7077"
+      - "8080:8080"
+    command: bash -c "/opt/spark/sbin/start-master.sh && tail -f /dev/null"
+
+  spark-worker:
+    image: apache/spark:latest
+    container_name: spark-worker
+    depends_on:
+      - spark-master
+    environment:
+      - SPARK_MASTER=spark://spark-master:7077
+    command: bash -c "/opt/spark/sbin/start-worker.sh spark://spark-master:7077 && tail -f /dev/null"
+
+  rstudio:
+    build: .
+    container_name: rstudio
+    ports:
+      - "8787:8787"
+    environment:
+      - PASSWORD=radiation123
+      - ROOT=true
+    volumes:
+      - "./data:/home/rstudio/data"
