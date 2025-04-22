@@ -4,7 +4,7 @@
 To demonstrate the real-world applicability of big data tools in healthcare analytics, a radiation exposure analysis pipeline was implemented using Apache Spark, R, and RStudio, and executed with Docker containers. This setup showcases schema-on-read flexibility, distributed processing, and a polyglot analytical environment aligned with the themes described in an article by Shakyawar et al. (2022).
 
 ### Environment Setup
-A Spark cluster using Docker was deployed and configured to run in standalone mode, accessible at **spark://spark-master:7077**. A second container hosted RStudio Server, where the sparklyr package facilitated integration between Spark and R. The radiation dataset, a CSV file containing quarterly airborne radionuclide measurements(), was mounted into the container via a shared volume.
+A Spark cluster using Docker was deployed and configured to run in standalone mode, accessible at **spark://spark-master:7077**. A second container hosted RStudio Server, where the sparklyr package facilitated integration between Spark and R. The radiation dataset, a CSV file containing quarterly airborne radionuclide measurements (California Department of Public Health, 2025), was mounted into the container via a shared volume.
 
 ### Data Ingestion and Preprocessing
 The dataset was ingested using **spark_read_csv()**, with **infer_schema = TRUE** to allow Spark to automatically determine data types. This directly applied the schema-on-read principle, enabling the ingestion of varied environmental measurements without the need for a rigid schema.
@@ -12,7 +12,7 @@ The dataset was ingested using **spark_read_csv()**, with **infer_schema = TRUE*
 Key columns included sampling period, location, radionuclide, and total effective dose equivalent. Relevant fields were converted into a numeric format and filtered for incomplete entries.
 
 ### Exploratory Analysis and Visualization
-The mean radiation dose per radionuclide was computed using dplyr operations in Spark. This summary was visualized in R using **ggplot2**, which produced a horizontal bar chart highlighting the relative exposure contributions by radionuclide.
+The mean radiation dose per radionuclide was computed using **dplyr** operations in Spark. This summary was visualized in R using **ggplot2**, which produced a horizontal bar chart highlighting the relative contributions of exposure by radionuclide.
 
 ### Feature Engineering and Predictive Modeling
 Using Spark's MLlib, a linear regression model was constructed to predict radiation dose from three features: radionuclide type, sampling location, and measured activity level. The model's predictions were then extracted and evaluated. The results demonstrated meaningful associations between sampling features and estimated radiation exposure, validating the analytic pipeline for environmental health applications.
